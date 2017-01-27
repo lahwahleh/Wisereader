@@ -36,7 +36,8 @@ angular.module('wisereader', ['ionic', 'wisereader.controllers'])
     url: '/recommendations',
     views: {
       'menuContent': {
-        templateUrl: 'templates/recommendations.html'
+        templateUrl: 'templates/recommendations.html',
+        controller: 'recommendationsCtrl'
       }
     }
   })
@@ -45,7 +46,8 @@ angular.module('wisereader', ['ionic', 'wisereader.controllers'])
       url: '/browse',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/browse.html',
+          controller: 'browseCtrl'
         }
       }
     })
@@ -73,7 +75,8 @@ angular.module('wisereader', ['ionic', 'wisereader.controllers'])
       url: '/upload',
       views: {
         'menuContent': {
-          templateUrl: 'templates/upload.html'
+          templateUrl: 'templates/upload.html',
+          controller: 'uploadCtrl'
         }
       }
     });
