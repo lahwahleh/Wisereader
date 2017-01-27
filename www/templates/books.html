@@ -1,0 +1,50 @@
+<ion-view view-title="Wisereader">
+  <ion-content>
+    
+
+<!-- 
+<table class="table">
+<thead>
+	<th ng-repeat="book in books" >{{book.id}}</th>
+</thead>
+<tbody>
+
+
+	<tr>
+		<td ng-repeat="book in books" >{{book.title}}</td>
+	</tr>
+</tbody>
+</table> -->
+
+ 
+
+
+ <!-- <div class="row header" ng-repeat="book in books">
+          <div class="col">{{book.id}}</div>
+          
+        </div>
+
+
+<div class="row" ng-repeat="book in books">
+ 
+ <div class="col">{{book.title}}</div>
+	
+</div> -->
+
+
+
+<ion-list>
+
+<ion-item ng-repeat="book in books" href="#/app/books/{{book.id}}">
+        {{book.title}}
+      </ion-item>
+    </ion-list>
+
+
+
+
+
+
+  
+  </ion-content>
+</ion-view>
