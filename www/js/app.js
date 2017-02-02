@@ -22,7 +22,11 @@ angular.module('wisereader', ['ionic', 'wisereader.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+
+
+
+  
   $stateProvider
 
     .state('app', {

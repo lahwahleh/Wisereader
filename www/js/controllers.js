@@ -43,12 +43,12 @@ angular.module('wisereader.controllers', [])
 
 .controller('booksCtrl', function($scope) {
   $scope.books = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { id: 1, title: 'Reggae', imgUrl: 'img/img1.jpg', pdfUrl: 'pdf/1.pdf'},
+    { id: 2, title: 'Chill', imgUrl: 'img/img2.jpg', pdfUrl: 'pdf/2.pdf'  },
+    { id: 3, title: 'Dubstep',  imgUrl: 'img/img3.jpg', pdfUrl: 'pdf/3.pdf' },
+    { id: 4, title: 'Indie', imgUrl: 'img/img4.jpg', pdfUrl: 'pdf/4.pdf' },
+    { id: 5, title: 'Rap', imgUrl: 'img/img5.jpg', pdfUrl: 'pdf/5.pdf' },
+    { id: 6, title: 'Cowbell', imgUrl: 'img/magic.jpg', pdfUrl: 'pdf/6.pdf'}
   ];
 })
 

@@ -1,11 +1,29 @@
 <ion-view view-title="Wisereader">
   <ion-content>
+
+
+    <ion-list>
+      <ion-item ng-repeat="book in books" href="{{book.pdfUrl}}">
+       <img ng-src=" {{book.imgUrl}}" />
+      </ion-item>
+    </ion-list>
+  
+
+
+ <!-- <a class="item item-list-detail">
+      <ion-scroll direction="x">
+        <div  ng-repeat="book in books">
+        <img ng-src="{{book.imgUrl}}" width="100%" />
+        </div>
+      </ion-scroll>
+    </a>
+ -->
     
 
 <!-- 
 <table class="table">
 <thead>
-	<th ng-repeat="book in books" >{{book.id}}</th>
+	<th ng-repeat="book in books" >{{book.imgUrl}}</th>
 </thead>
 <tbody>
 
@@ -33,12 +51,26 @@
 
 
 
-<ion-list>
+<!-- <ion-list>
 
 <ion-item ng-repeat="book in books" href="#/app/books/{{book.id}}">
         {{book.title}}
       </ion-item>
-    </ion-list>
+    </ion-list> -->
+
+<!-- <ion-item ng-repeat="book in books" href="#/app/books/{{book.id}}">
+        <img ng-src="{{book.imgUrl}}" class="image-list-thumb"/>
+      </ion-item>
+    </ion-list>  -->
+
+<!-- <ion-list>
+<ion-item>
+    <img ng-repeat="book in books" ng-src="{{book.imgUrl}}" ng-click="" class="image-list-thumb"/>
+  </ion-item>
+ </ion-list> -->
+
+
+
 
 
 
