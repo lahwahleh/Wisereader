@@ -10,3 +10,19 @@ img {
     background-image: url('../img/header.jpg');
     text-align: center;
 }
+
+.ion-ios-book {
+	color: green;
+}
+
+.ion-heart{
+	color: red;
+}
+
+.ion-star{
+	color: orange;
+}
+
+.head {
+	font-family: 'tahoma'
+}

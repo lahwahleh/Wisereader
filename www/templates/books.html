@@ -1,18 +1,57 @@
 <ion-view view-title="Wisereader">
 
   <ion-content >
+ <!-- <div class="header-image" style="">
+    <h2>Wisereader</h2>
+    <h4>Read the Best Books on the Go!</h4>
+  </div> 
+  -->
+  <h2> Latest Books </h2>
+ <div class="list card" ng-repeat="book in books" >
 
-  <div class="header-image" style="">
-<!--     <h2>Wisereader</h2>
- -->    <h4>Read the Best Books on the Go!</h4>
+          <div class="item item-body">
+            <img class="full-image" ng-src=" {{book.imgUrl}}">
+            
+             <h2 class="text-center">{{book.title}}</h2>
+            <p>
+              {{book.shortDesc}}
+            </p>
+          
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="{{book.pdfUrl}}">
+              <i class="icon ion-ios-book"></i>
+              Read
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-heart"></i>
+              Save
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-star"></i>
+              Review
+            </a>
+          </div>
+
   </div>
 
+
+ 
+<!--
     <ion-list>
       <ion-item ng-repeat="book in books" href="{{book.pdfUrl}}">
        <img ng-src=" {{book.imgUrl}}" />
       </ion-item>
     </ion-list>
   
+ -->
+
+
+
+
+
+
 
 
  <!-- <a class="item item-list-detail">
