@@ -1,11 +1,25 @@
 <ion-view view-title="Wisereader">
 
-  <ion-content>
+
+
+ <ion-content>
+ 
  <div class="header-image" style="">
   </div> 
  
+
+ <label class="item item-input topSearch">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="text" placeholder="Search a book" ng-model="searchBook">
+    </label>
+
+
+
+
   <h3 class="head"> Latest Books </h3>
- <div class="list card" ng-repeat="book in books" >
+
+
+ <div class="list card" ng-repeat="book in books | filter:searchBook" >
 
           <div class="item item-body">
             <img class="full-image" ng-src="{{book.imgUrl}}" href="#books">
