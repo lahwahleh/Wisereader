@@ -1,16 +1,14 @@
 <ion-view view-title="Wisereader">
 
-  <ion-content >
- <!-- <div class="header-image" style="">
-    <h2>Wisereader</h2>
-    <h4>Read the Best Books on the Go!</h4>
+  <ion-content>
+ <div class="header-image" style="">
   </div> 
-  -->
-  <h2> Latest Books </h2>
+ 
+  <h3 class="head"> Latest Books </h3>
  <div class="list card" ng-repeat="book in books" >
 
           <div class="item item-body">
-            <img class="full-image" ng-src=" {{book.imgUrl}}">
+            <img class="full-image" ng-src="{{book.imgUrl}}" href="#books">
             
              <h2 class="text-center">{{book.title}}</h2>
             <p>

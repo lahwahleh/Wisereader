@@ -3,12 +3,13 @@ img {
 	height: 500px;
 }
 .header-image {
-    height: 300px;
+    height: 100px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/wisereader.jpg');
     text-align: center;
+    border: 1px solid;
 }
 
 .ion-ios-book {
