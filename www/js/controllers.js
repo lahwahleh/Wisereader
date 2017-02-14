@@ -1,4 +1,4 @@
-angular.module('wisereader.controllers', [])
+angular.module('wisereader.controllers', ['ionic', 'ion-affix'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -50,6 +50,27 @@ angular.module('wisereader.controllers', [])
     { id: 5, title: 'Rap', imgUrl: 'img/img5.jpg', pdfUrl: 'pdf/5.pdf', shortDesc: 'ndiks ioewhd jekd jiend hhjjj' },
     { id: 6, title: 'Cowbell', imgUrl: 'img/magic.jpg', pdfUrl: 'pdf/6.pdf', shortDesc: 'uns jsjs haauj jksks hssks '}
   ];
+
+
+var shuffleArray = function(books) {
+              var m = books.length, t, i;
+
+              // While there remain elements to shuffle
+              while (m) {
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
+
+                // And swap it with the current element.
+                t = books[m];
+                books[m] = books[i];
+                books[i] = t;
+              }
+
+              return books;
+            }
+shuffleArray($scope.books);
+
+
 })
 
 .controller('bookCtrl', function($scope, $stateParams) {
