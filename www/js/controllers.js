@@ -41,15 +41,10 @@ angular.module('wisereader.controllers', ['ionic', 'ion-affix'])
   };
 })
 
-.controller('booksCtrl', function($scope) {
-  $scope.books = [
-    { id: 1, title: 'Reggae', imgUrl: 'img/img1.jpg', pdfUrl: 'pdf/1.pdf', shortDesc: 'ksjf jshjfh hhsf odfjfd jjhf hhlhfs hffjsj'},
-    { id: 2, title: 'Chill', imgUrl: 'img/img2.jpg', pdfUrl: 'pdf/2.pdf', shortDesc: 'jdsf kkels fgkfjgrn djjds bnsks'  },
-    { id: 3, title: 'Dubstep',  imgUrl: 'img/img3.jpg', pdfUrl: 'pdf/3.pdf', shortDesc: 'nnxuso hjss hue dkld kkdjsk jkss' },
-    { id: 4, title: 'Indie', imgUrl: 'img/img4.jpg', pdfUrl: 'pdf/4.pdf', shortDesc: 'mbjsdj mfjd ksle skedmd ndss klsnzj' },
-    { id: 5, title: 'Rap', imgUrl: 'img/img5.jpg', pdfUrl: 'pdf/5.pdf', shortDesc: 'ndiks ioewhd jekd jiend hhjjj' },
-    { id: 6, title: 'Cowbell', imgUrl: 'img/magic.jpg', pdfUrl: 'pdf/6.pdf', shortDesc: 'uns jsjs haauj jksks hssks '}
-  ];
+.controller('booksCtrl', function($scope, $http) {
+  $http.get("http://localhost:3000/books").then(function(response){
+  $scope.books = response.data.books;
+  console.log($scope.books);
 
 
 var shuffleArray = function(books) {
@@ -69,6 +64,12 @@ var shuffleArray = function(books) {
               return books;
             }
 shuffleArray($scope.books);
+  
+});
+ 
+
+
+
 
 
 })

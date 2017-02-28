@@ -3,54 +3,71 @@
 
 
 
-  <ion-content>
- <div class="header-image" style="">
-  </div> 
- 
+<!-- 
+    <div class="header-image" style="">
+    </div> -->
 
- <label class="item item-input topSearch">
+<br><br>
+    <label id="search" class="item item-input topSearch">
       <i class="icon ion-search placeholder-icon"></i>
       <input type="text" placeholder="Search a book" ng-model="searchBook">
     </label>
 
 
+  <ion-content>
+
+    <h3 class="head"> Latest Books </h3>
 
 
-  <h3 class="head"> Latest Books </h3>
+    <div class="list card" ng-repeat="book in books | filter:searchBook">
 
+      <div class="item item-body">
+        <a href="#/app/books/{{book.id}}">
+          <img class="full-image" ng-src="{{book.imgUrl}}" href="#books">
 
- <div class="list card" ng-repeat="book in books | filter:searchBook" >
+          <h1 class="text-center title">{{book.title}}</h1>
+        </a>
 
-          <div class="item item-body">
-            <img class="full-image" ng-src="{{book.imgUrl}}" href="#books">
-            
-             <h2 class="text-center">{{book.title}}</h2>
-            <p>
-              {{book.shortDesc}}
-            </p>
-          
+        <div class="row">
+
+          <div class="col-sm-6">
+
+            <h2 class="">By {{book.author}}</h2>
           </div>
 
-          <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="{{book.pdfUrl}}">
-              <i class="icon ion-ios-book"></i>
-              Read
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-heart"></i>
-              Save
-            </a>
-            <a class="tab-item" href="#">
-              <i class="icon ion-star"></i>
-              Review
-            </a>
+          <div class="col-sm-6 pull-right">
+
+
+            <h2 class="pull-right">In {{book.category}}</h2>
+
           </div>
 
-  </div>
+        </div>
 
 
- 
-<!--
+        <p>
+          {{book.shortDesc}}
+        </p>
+
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="{{book.pdfUrl}}">
+          <i class="icon ion-ios-book"></i> Read
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-heart"></i> Save
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-star"></i> Review
+        </a>
+      </div>
+
+    </div>
+
+
+
+    <!--
     <ion-list>
       <ion-item ng-repeat="book in books" href="{{book.pdfUrl}}">
        <img ng-src=" {{book.imgUrl}}" />
@@ -66,7 +83,7 @@
 
 
 
- <!-- <a class="item item-list-detail">
+    <!-- <a class="item item-list-detail">
       <ion-scroll direction="x">
         <div  ng-repeat="book in books">
         <img ng-src="{{book.imgUrl}}" width="100%" />
@@ -74,9 +91,9 @@
       </ion-scroll>
     </a>
  -->
-    
 
-<!-- 
+
+    <!-- 
 <table class="table">
 <thead>
 	<th ng-repeat="book in books" >{{book.imgUrl}}</th>
@@ -90,10 +107,10 @@
 </tbody>
 </table> -->
 
- 
 
 
- <!-- <div class="row header" ng-repeat="book in books">
+
+    <!-- <div class="row header" ng-repeat="book in books">
           <div class="col">{{book.id}}</div>
           
         </div>
@@ -107,32 +124,35 @@
 
 
 
-<!-- <ion-list>
+    <!-- <ion-list>
 
 <ion-item ng-repeat="book in books" href="#/app/books/{{book.id}}">
         {{book.title}}
       </ion-item>
     </ion-list> -->
 
-<!-- <ion-item ng-repeat="book in books" href="#/app/books/{{book.id}}">
+    <!-- <ion-item ng-repeat="book in books" href="#/app/books/{{book.id}}">
         <img ng-src="{{book.imgUrl}}" class="image-list-thumb"/>
       </ion-item>
     </ion-list>  -->
 
-<!-- <ion-list>
+    <!-- <ion-list>
 <ion-item>
     <img ng-repeat="book in books" ng-src="{{book.imgUrl}}" ng-click="" class="image-list-thumb"/>
   </ion-item>
  </ion-list> -->
 
-
-
-
-
-
-
-
-
-  
   </ion-content>
+
+
+
+  <button ng-click="scrollTo('search')" class="float-button">
+  <span class="height-fix">
+      <a  class="content">
+        <i class="ion-search placeholder-icon"> </i>
+      </a>
+    </span>
+</button>
+
+
 </ion-view>
