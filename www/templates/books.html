@@ -13,10 +13,15 @@
       <input type="text" placeholder="Search a book" ng-model="searchBook">
     </label>
 
-
+    
+    <!-- <h3 class="head"> Latest Books </h3> 
+    <div class="item item-divider"><div class="container text-center">
+      <h4>Latest Books </h4>
+    </div></div>
+<br><br>
+-->
   <ion-content>
 
-    <h3 class="head"> Latest Books </h3>
 
 
     <div class="list card" ng-repeat="book in books | filter:searchBook">
