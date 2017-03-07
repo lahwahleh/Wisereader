@@ -10,7 +10,7 @@
 
       </ion-nav-buttons>
 
-<!-- <ion-nav-buttons side="right" >
+      <!-- <ion-nav-buttons side="right" >
         <div class="bar bar-header item-input-inset">
             <label class="item-input-wrapper textbox-search">
                 <i class="icon ion-search placeholder-icon"></i>
@@ -22,7 +22,7 @@
  -->
 
 
- 
+
 
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
@@ -40,30 +40,19 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-       <ion-item menu-close href="#/app/books">
-Home
-</ion-item>
-        <ion-item menu-close href="#/app/browse">
-Browse Books
-</ion-item>
-        <ion-item menu-close href="#/app/library" ng-show="isAuthenticated" ngclick="library()">
-          My Library
+     <!--    <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item> -->
+        <ion-item menu-close href="#/app/books">
+          Books
+        </ion-item>
+        <ion-item menu-close href="#/app/upload">
+          Upload
         </ion-item>
         <ion-item menu-close href="#/app/recommendations">
           Recommendations
         </ion-item>
-        <ion-item menu-close href="#/app/upload">
-          Upload a Book
-        </ion-item>
-       <ion-item menu-close ng-show="isAuthenticated" ngclick="logout()">
-Logout
-</ion-item>
-<ion-item menu-close ng-hide="isAuthenticated" ngclick="loginFromMenu()">
-Login
-</ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
-
-

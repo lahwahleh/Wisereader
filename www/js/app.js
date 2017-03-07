@@ -1,9 +1,9 @@
-// Ionic wisereader App
+// Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'wisereader' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'wisereader.controllers' is found in controllers.js
+// 'starter.controllers' is found in controllers.js
 angular.module('wisereader', ['ionic', 'wisereader.controllers'])
 
 .run(function($ionicPlatform) {
@@ -22,11 +22,7 @@ angular.module('wisereader', ['ionic', 'wisereader.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-
-
-
-  
+.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
     .state('app', {
@@ -35,23 +31,12 @@ angular.module('wisereader', ['ionic', 'wisereader.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-  .state('app.recommendations', {
-    url: '/recommendations',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/recommendations.html',
-        controller: 'recommendationsCtrl'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
+   .state('app.book', {
+      url: '/book',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html',
-          controller: 'browseCtrl'
+          templateUrl: 'templates/book.html',
+          controller: 'booksCtrl'
         }
       }
     })
@@ -64,23 +49,21 @@ angular.module('wisereader', ['ionic', 'wisereader.controllers'])
         }
       }
     })
-
-  .state('app.single', {
-    url: '/books/:bookId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/book.html',
-        controller: 'bookCtrl'
+    .state('app.recommendations', {
+      url: '/recommendations',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/recommendations.html',
+          controller: 'booksCtrl'
+        }
       }
-    }
-  })
-
-  .state('app.upload', {
+    })
+      .state('app.upload', {
       url: '/upload',
       views: {
         'menuContent': {
           templateUrl: 'templates/upload.html',
-          controller: 'uploadCtrl'
+          controller: 'booksCtrl'
         }
       }
     });

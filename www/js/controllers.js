@@ -1,4 +1,4 @@
-angular.module('wisereader.controllers', ['ionic', 'ion-affix'])
+angular.module('wisereader.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
